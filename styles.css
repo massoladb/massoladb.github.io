@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    src: url(../assets/fonts/Montserrat-ExtraBold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    line-height: 2rem;
+}
+
+li {
+    padding: 0.5rem;
+    border-bottom: 1px #ff1f5757 solid;
+}
+
+.container,
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+}
+
+.spc-btwn {
+    justify-content: space-between;
+}
+
+.gap1 {
+    gap: 1rem;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.title {
+    font-family: 'Montserrat ExtraBold';
+    color: #fff;
+    font-size: 2.8rem;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 42px #ff0040,
+        0 0 82px #ff0040,
+        0 0 92px #ff0040,
+        0 0 112px #ff0040;
+    animation: flicker 1.5s infinite alternate;
+    letter-spacing: 0.2rem;
+}
+
+.off,
+.off2 {
+    font-family: 'Montserrat ExtraBold';
+    font-size: 2.8rem;
+    color: #0c0c0c;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 42px #ff0040,
+        0 0 82px #ff0040,
+        0 0 92px #ff0040,
+        0 0 112px #ff0040;
+    animation: flicker2 1s infinite alternate;
+}
+
+.off2 {
+    animation: flicker2 2.5s infinite alternate;
+}
+
+header {
+    padding: 2rem;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.talign-center {
+    text-align: center;
+}
+
+.talign-right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    background-color: #0000004b;
+    border-radius: 10px;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.v-spacing {
+    width: 100%;
+    height: 1.5rem;
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #075E54;
+    padding: 1rem;
+    font-family: 'Montserrat ExtraBold';
+    border-radius: 10px;
+    gap: 1rem;
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+#whatsapp {
+    aspect-ratio: 1 / 1;
+    height: 2rem;
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 7px #fff,
+            0 0 42px #ff0040,
+            0 0 82px #ff0040,
+            0 0 92px #ff0040,
+            0 0 112px #ff0040;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes flicker2 {
+
+    0%,
+    18%,
+    57%,
+    100% {
+        text-shadow: none
+    }
+
+    20%,
+    55% {
+        z-index: 1;
+        color: #fff;
+        text-shadow:
+            0 0 7px #fff,
+            0 0 42px #ff0040,
+            0 0 82px #ff0040,
+            0 0 92px #ff0040,
+            0 0 112px #ff0040;
+        ;
+    }
+}
